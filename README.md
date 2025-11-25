@@ -7,14 +7,14 @@ Each exercise includes clean, well-commented C# code and can be compiled using V
 
 ## Included Projects
 
-### 1. **Ex6_1 — Student Class Demo**
+### 1. **StudentManagement**
 A simple object-oriented programming exercise demonstrating:
 - Class definition
 - Encapsulation (private fields + public properties)
 - Methods and formatted output
 - Object instantiation in `Main()`
 
-Project files are located in **Ex6_1_StudentDemo/**.
+Project files are located in **StudentManagement/**.
 
 More exercises may be added in the future as I organize additional coursework.
 
