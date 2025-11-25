@@ -1,0 +1,117 @@
+# Exercise 6-1: Student Class Demonstration
+
+This project implements a basic `Student` class to demonstrate object-oriented programming principles in C#.
+
+## Features
+- **Encapsulation:** Uses private fields with public properties.
+- **Class Methods:**  
+  - `Study()` — prints a message describing the student studying  
+  - `Examination()` — prints the grade/class currently taking an exam  
+  - `Tell()` — prints the student's age and name  
+- **Main Program:**
+  - Creates two student instances
+  - Sets their properties
+  - Calls class methods to display behavior
+
+## Files
+- `Student.cs` — class definition  
+- `Program.cs` — main entry point  
+
+## How to Compile
+Simply open the folder in Visual Studio or another C# IDE and run `Program.cs`.
+
+
+using System;
+
+namespace Ex6_1
+{
+    public class Student
+    {
+        // Private fields
+        private string name;
+        private int id;
+        private int age;
+        private string grade;
+
+        // Public properties for encapsulation
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
+
+        public int Age
+        {
+            get { return age; }
+            set { age = value; }
+        }
+
+        public string Grade
+        {
+            get { return grade; }
+            set { grade = value; }
+        }
+
+        // Class methods
+        public void Study()
+        {
+            Console.WriteLine("学号为 {0} 的学生正在学习", Id);
+        }
+
+        public void Examination()
+        {
+            Console.WriteLine("{0} 正在考试", Grade);
+        }
+
+        public void Tell()
+        {
+            Console.WriteLine("正在讲话的是一个 {0} 岁的学生：{1}", Age, Name);
+        }
+    }
+}
+
+
+using System;
+
+namespace Ex6_1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Student stu1 = new Student();
+            stu1.Name = "张三";
+            stu1.Age = 20;
+            stu1.Id = 2000001;
+            stu1.Grade = "材化22级1班";
+
+            stu1.Study();
+            stu1.Examination();
+            stu1.Tell();
+
+            Console.WriteLine("----------------");
+
+            Student stu2 = new Student();
+            stu2.Name = "王芳";
+            stu2.Age = 21;
+            stu2.Id = 2000004;
+            stu2.Grade = "工管22级6班";
+
+            stu2.Study();
+            stu2.Examination();
+            stu2.Tell();
+
+            // Output 王芳的学号和年龄（题目要求）
+            Console.WriteLine("王芳的学号为：{0}", stu2.Id);
+            Console.WriteLine("王芳的年龄为：{0}", stu2.Age);
+
+            Console.ReadKey();
+        }
+    }
+}
