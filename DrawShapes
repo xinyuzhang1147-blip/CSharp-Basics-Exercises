@@ -29,7 +29,7 @@ namespace Ex6_3
             this.lines = lines;
         }
 
-        // 输出直角三角形
+        // Output Right Triangle
         public void draTrina()
         {
             for (int i = 1; i <= lines; i++)
@@ -42,7 +42,7 @@ namespace Ex6_3
             }
         }
 
-        // 输出矩形
+        // Output Rectangle
         public void drawRec()
         {
             for (int i = 1; i <= lines; i++)
@@ -55,7 +55,7 @@ namespace Ex6_3
             }
         }
 
-        // 输出平行四边形
+        // Output Parallelogram
         public void drawPra()
         {
             for (int i = 1; i <= lines; i++)
