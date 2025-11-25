@@ -1,0 +1,96 @@
+# Draw Shapes with C#
+
+This project demonstrates simple console-based shape drawing using C#.  
+It contains a `Draw` class that can output:
+
+- Right triangle
+- Rectangle
+- Parallelogram
+
+Each shape is composed of `*` characters printed to the console.
+
+---
+
+## 📁 Project Structure
+
+
+using System;
+
+namespace Ex6_3
+{
+    class Draw
+    {
+        int count { get; set; }
+        int lines { get; set; }
+
+        public Draw(int count, int lines)
+        {
+            this.count = count;
+            this.lines = lines;
+        }
+
+        // 输出直角三角形
+        public void draTrina()
+        {
+            for (int i = 1; i <= lines; i++)
+            {
+                for (int j = 0; j < i; j++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
+        }
+
+        // 输出矩形
+        public void drawRec()
+        {
+            for (int i = 1; i <= lines; i++)
+            {
+                for (int j = 0; j < count; j++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
+        }
+
+        // 输出平行四边形
+        public void drawPra()
+        {
+            for (int i = 1; i <= lines; i++)
+            {
+                for (int k = 1; k < i; k++)
+                    Console.Write(" ");
+                for (int j = 0; j < count; j++)
+                    Console.Write("*");
+                Console.WriteLine();
+            }
+            Console.WriteLine();
+        }
+    }
+}
+
+
+using System;
+
+namespace Ex6_3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Draw d = new Draw(5, 5);
+
+            d.draTrina();
+            Console.WriteLine("----------------------------------");
+
+            d.drawRec();
+            Console.WriteLine("----------------------------------");
+
+            d.drawPra();
+
+            Console.ReadKey();
+        }
+    }
+}
